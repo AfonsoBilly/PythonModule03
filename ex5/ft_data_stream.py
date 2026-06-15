@@ -32,7 +32,9 @@ if __name__ == "__main__":
         print(f"Event {i}: Player {name} did action {action}")
 
     generator2 = gen_event()
-    event_list: list[tuple[str, str]] = [next(generator2) for _ in range(10)]
+    event_list: list[tuple[str, str]] = []
+    for _ in range(10):
+        event_list.append(next(generator2))
     print(f"Built list of 10 events: {event_list}")
 
     for event in consume_event(event_list):

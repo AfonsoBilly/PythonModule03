@@ -9,6 +9,8 @@ if __name__ == "__main__":
         print("No arguments provided!")
     else:
         print(f"Arguments received: {len(args)}")
-        for i, arg in enumerate(args):
-            print(f"Argument {i + 1}: {arg}")
+        i: int = 1
+        for arg in args:
+            print(f"Argument {i}: {arg}")
+            i += 1
     print(f"Total arguments: {len(sys.argv)}")

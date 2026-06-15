@@ -32,7 +32,8 @@ if __name__ == "__main__":
         total: int = sum(inventory.values())
         print(f"Total quantity of the {len(inventory)} items: {total}")
 
-        for item_name, qty_val in inventory.items():
+        for item_name in inventory:
+            qty_val: int = inventory[item_name]
             pct: float = round(qty_val / total * 100, 1)
             print(f"Item {item_name} represents {pct}%")
 
